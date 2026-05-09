@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --background: #e2e2df;
+  --foreground: #1b241e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-gray text-kuro-midori font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
